@@ -150,9 +150,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6024}
     - Class: 114
-      Script: {instanceID: 7088}
+      Script: {instanceID: 7022}
     - Class: 114
-      Script: {instanceID: 7806}
+      Script: {instanceID: 7090}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -247,13 +247,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6986}
     - Class: 114
-      Script: {instanceID: 7088}
+      Script: {instanceID: 7022}
     - Class: 114
-      Script: {instanceID: 7706}
+      Script: {instanceID: 7090}
     - Class: 114
-      Script: {instanceID: 7718}
+      Script: {instanceID: 7708}
     - Class: 114
-      Script: {instanceID: 7806}
+      Script: {instanceID: 7720}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1099,6 +1099,12 @@ ScriptsOnlyBuild:
     className: ProjectileHero
   - hash:
       serializedVersion: 2
+      Hash: f7217af44c0591739b8fd0ec19a0a5a5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MenuManager
+  - hash:
+      serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1199,14 +1205,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: f7217af44c0591739b8fd0ec19a0a5a5
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MenuManager
   platform: 20
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/__Scene_0.unity
-  playerPath: /home/goob/SpaceSHUMP/build
+  playerPath: /home/goob/SpaceSHUMP/build/build
