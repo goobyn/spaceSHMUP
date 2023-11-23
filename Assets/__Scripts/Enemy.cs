@@ -10,6 +10,9 @@ public class Enemy : MonoBehaviour
     public float fireRate = 0.3f;
     public float health = 10f;
     public int score = 100;
+    public float powerUpDropChance = 1f;
+
+    protected bool calledShipDestroyed = false;
 
     protected BoundsCheck bndCheck;
 
@@ -43,12 +46,25 @@ public class Enemy : MonoBehaviour
     void OnCollisionEnter(Collision coll) {
         GameObject otherGO = coll.gameObject;
 
-        if (otherGO.GetComponent<ProjectileHero>() != null) {
-            Destroy(otherGO);
-            Destroy(gameObject);
-        }
-        else {
-            Debug.Log("Enemy hit by non-ProjectileHero: " + otherGO.name);
+        ProjectileHero p = otherGO.GetComponent<ProjectileHero>();
+        if ( p != null ) {
+            // Only damage this Enemy if it’s on screen
+            if ( bndCheck.isOnScreen ) {
+                // Get the damage amount from the Main WEAP_DICT.
+                health -= Main.GET_WEAPON_DEFINITION( p.type ).damageOnHit;
+                if ( health <= 0 ) {
+                    if (!calledShipDestroyed) {
+                        calledShipDestroyed = true;
+                        Main.SHIP_DESTROYED(this);
+                    }
+                    // Destroy this Enemy
+                    Destroy( this.gameObject );
+                }
+            }
+            // Destroy the ProjectileHero regardless
+            Destroy( otherGO );
+        } else {
+            print( "Enemy hit by non-ProjectileHero: " + otherGO.name );
         }
     }
 }
