@@ -13,7 +13,7 @@ public class Main : MonoBehaviour
     public GameObject[] prefabEnemies;
     public float enemySpawnPerSecond = 0.5f;
     public float enemyInsetDefault = 1.5f;
-    public float gameRestartDelay = 2;
+    public float gameRestartDelay = 4;
     public GameObject prefabPowerUp;
     public WeaponDefinition[] weaponDefinitions;
     public eWeaponType[] powerUpFrequency = new eWeaponType[] {

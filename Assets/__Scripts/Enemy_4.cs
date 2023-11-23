@@ -96,6 +96,7 @@ public class Enemy_4 : Enemy {            // Enemy_4 also extends the Enemy clas
 
                 // Destroy this Enemy_4
                 Destroy( gameObject );
+                MenuManager.updateScore(score);
             }
         } else {
             Debug.Log( "Enemy_4 hit by non-ProjectileHero: " + otherGO.name );

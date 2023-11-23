@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public float health = 10f;
     public int score = 100;
     public float powerUpDropChance = 1f;
+    
 
     protected bool calledShipDestroyed = false;
 
@@ -59,6 +60,7 @@ public class Enemy : MonoBehaviour
                     }
                     // Destroy this Enemy
                     Destroy( this.gameObject );
+                    MenuManager.updateScore(score);
                 }
             }
             // Destroy the ProjectileHero regardless

@@ -91,7 +91,7 @@ public class Hero : MonoBehaviour
                         Debug.Log("Weapon swapped");
                     }
                 }
-                else {
+                else if (pUp.type != eWeaponType.shield) {
                         ClearWeapons();
                         weapons[0].SetType(pUp.type);
                         Debug.Log("Weapons cleared");
